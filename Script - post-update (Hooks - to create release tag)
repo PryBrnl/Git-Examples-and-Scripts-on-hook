@@ -1,0 +1,7 @@
+#Create a release tag using the update script in the .git/hooks/post-update directory
+
+#!/bin/bash
+cd /opt/apps.git
+git_tag=release-$(date "+%Y-%m-%d")
+git tag $git_tag
+git push origin
