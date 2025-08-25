@@ -1,0 +1,7 @@
+#Script for update in the hooks directory for Restricting Manual pushes to the master branch
+
+#!/bin/sh
+if [ "$1" == refs/heads/master ];
+then
+  echo "Manual pushes to the master branch is restricted!!"
+  exit 1
